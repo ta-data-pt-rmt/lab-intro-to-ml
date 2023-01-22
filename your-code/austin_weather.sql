@@ -1,3 +1,4 @@
+
 CREATE TABLE IF NOT EXISTS austin_weather (
     `Date` DATETIME,
     `TempHighF` INT,
