@@ -1346,3 +1346,35 @@ INSERT INTO austin_weather VALUES
     ('2017-07-29 00:00:00',107,92,77,'72','64','55','82','51','19','29.91','29.86','29.79','10','10','10','12','4','17','0',' '),
     ('2017-07-30 00:00:00',106,93,79,'70','68','63','69','48','27','29.96','29.91','29.87','10','10','10','13','4','20','0',' '),
     ('2017-07-31 00:00:00',99,88,77,'66','61','54','64','43','22','30.04','29.97','29.91','10','10','10','12','4','20','0',' ');
+
+
+CREATE DATABASE IF NOT EXISTS austin_weather;
+USE austin_weather;
+
+select * from austin_weather;
+
+select Date 
+from austin_weather;
+
+SELECT COUNT(DISTINCT Date) AS total_days
+FROM austin_weather;
+
+select count(distinct TempHighF)
+FROM austin_weather;
+
+select* FROM austin_weather;
+
+select Date, TempHighF
+FROM austin_weather
+order by TempHighF DESC
+Limit 1;
+
+select avg(HumidityAvgPercent)
+FROM austin_weather;
+
+select Date, SeaLevelPressureAvgInches, DewPointAvgF
+FROM austin_weather
+where DewPointAvgF >28
+order by SeaLevelPressureAvgInches DESC
+limit 10;
+
